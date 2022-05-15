@@ -87,7 +87,7 @@ const ListProduct = () => {
                 }).map((item, index) => {
                     return (
 
-                        <div className="card">
+                        <div key={index} className="card">
                             <div className="card-img">
                                 <img src={item.img} alt="house1" />
                                 <ul className="action">
