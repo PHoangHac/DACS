@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Data from './Data';
-import '../components/styles.scss';
+import '../../components/styles.scss';
 
 const ListProduct = () => {
 

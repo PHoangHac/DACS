@@ -54,7 +54,20 @@ $fourth-color: rgb(25, 162, 43);
 
         li{
             
-            line-height: 6vh;
+            // line-height: 6vh;
+            // margin: 3px;
+            // padding: 0px 22px;
+            // display: flex;
+            // font-size: 0.9rem;
+            // text-transform: uppercase;
+            // font-weight: 500;
+            // color:#ffffff;
+            // letter-spacing: 1px;
+            // border-radius: 3px;
+            // transition: 0.2s ease-in-out;
+
+            Link{
+                line-height: 6vh;
             margin: 3px;
             padding: 0px 22px;
             display: flex;
@@ -65,14 +78,22 @@ $fourth-color: rgb(25, 162, 43);
             letter-spacing: 1px;
             border-radius: 3px;
             transition: 0.2s ease-in-out;
+            }
+
+            Link:hover{
+                background-color: #FF1414;
+                color:#ffffff;
+                box-shadow: 5px 10px 30px rgba(255, 2, 2, 0.336);
+                transition: all ease 0.2s; 
+            }
         }
 
-        li:hover{
-            background-color: #FF1414;
-            color:#ffffff;
-            box-shadow: 5px 10px 30px rgba(255, 2, 2, 0.336);
-            transition: all ease 0.2s;  
-        }
+        // li:hover{
+        //     background-color: #FF1414;
+        //     color:#ffffff;
+        //     box-shadow: 5px 10px 30px rgba(255, 2, 2, 0.336);
+        //     transition: all ease 0.2s;  
+        // }
     }
 
     .menu-btn,

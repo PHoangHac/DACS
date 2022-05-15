@@ -1,6 +1,7 @@
 const express = require("express");
 const db = require("./models");
 const postRouter = require("./routes/Post");
+const usersRouter = require("./routes/Users");
 const cors = require("cors");
 //import thu vien
 
@@ -19,7 +20,9 @@ app.get(('/'), (req, res)=>{
 });
 
 app.use("/posts", postRouter);
-//path , callback 
+
+app.use("/auth", usersRouter);
+
 
 db.sequelize.sync().then(() =>{
     app.listen(port, ()=>{

@@ -1,11 +1,12 @@
 import React,{useEffect, useState} from 'react';
-import '../components/testdb.scss';
+import '../testdata/testdb.scss';
 import axios from 'axios';
-
-
+import { useNavigate } from "react-router-dom";
 const Testdata = () => {
 
   const [listall, setListAll] = useState([]);
+
+  let navigate = useNavigate();
 
   useEffect(() =>{
       axios.get("http://localhost:8080/posts").then((res) =>{
@@ -18,10 +19,10 @@ const Testdata = () => {
     <div className='content-data'>
         {listall.map((value, index) =>{
           return(
-            <div className="data-item">
-                <h1 key={index}>{value.title}</h1>
-                <p key={index}>{value.postText}</p>
-                <h2 key={index}>{value.username}</h2>
+            <div key={index} className="data-item" onClick={() => navigate(`/post/${value.id}`)}>
+                <h1 >{value.title}</h1>
+                <p >{value.postText}</p>
+                <h2 >{value.username}</h2>
             </div>
           )
         })}
