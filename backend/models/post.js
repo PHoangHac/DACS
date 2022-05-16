@@ -4,8 +4,16 @@ module.exports = (sequelize, DataTypes ) =>{
             type: DataTypes.STRING,
             allowNull: false
         },
-        postText:{
+        address:{
             type: DataTypes.STRING,
+            allowNull: false
+        },
+        price:{
+            type: DataTypes.DOUBLE,
+            allowNull: false
+        },
+        member:{
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         username:{

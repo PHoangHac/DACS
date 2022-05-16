@@ -16,8 +16,10 @@ const Register2 = () => {
         password: Yup.string().min(6).max(20).required("You must enter password !")
       })
 
+      const Navigate = useNavigate();
       const onSubmit = (data) =>{
         axios.post("http://localhost:8080/auth", data).then(() =>{
+              Navigate('/Login');
             console.log(data);
         });
       }

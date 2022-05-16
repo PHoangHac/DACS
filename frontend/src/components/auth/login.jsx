@@ -1,17 +1,23 @@
 import axios from 'axios';
 import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
   const [showpass, setShowPass] = useState(false);
-  
+  const Navigate = useNavigate();
   const [username, setUseName] = useState("");
   const [password, setPassWord] = useState("");
 
   const login = () =>{
     const data = {username: username, password: password};
     axios.post("http://localhost:8080/auth/login", data).then((res) =>{
-        console.log(res.data);
+        if(res.data.error){
+          alert(res.data.error);
+        } else{
+          localStorage.setItem("accessToken", res.data); 
+          Navigate("/");
+        }
     });
   }
  
