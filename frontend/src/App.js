@@ -3,7 +3,8 @@ import Homepage from './containers/homepage';
 import ListProduct from './components/product/listproduct';
 import Header from './components/header';
 import Login from './components/auth/login';
-import Register from './components/auth/register';
+// import Register from './components/auth/register';
+import Register2 from './components/auth/register2';
 import Testdata from '../src/components/testdata/testdata';
 import {
   Routes,
@@ -21,7 +22,7 @@ function App() {
              <Route path='/' exact element={<Homepage />} />
              <Route path='/Features' element={<ListProduct />}/>
              <Route path='/Login' element={<Login />}/>
-             <Route path='/Register' element={<Register />}/>
+             <Route path='/Register' element={<Register2 />}/>
              <Route path='/displaydata' element={<Testdata />} />
              <Route path='/createdata' element={<CreatDT />} />
              <Route path='/post/:id' element={<Post />} />
